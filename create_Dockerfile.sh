@@ -7,11 +7,11 @@ GCR_URL=k8s.gcr.io
 ALIYUN_URL=registry.cn-hangzhou.aliyuncs.com/inspur_research
 
 
-image_list=(quay.io/prometheus/alertmanager:latest
-grafana/grafana:latest
-quay.io/prometheus/node-exporter:latest
-quay.io/prometheus/prometheus:latest
-quay.io/coreos/kube-state-metrics:latest)
+image_list=(quay.io/prometheus/prometheus:v2.0.0
+quay.io/prometheus/node_exporter:v0.15.2
+quay.io/prometheus/alertmanager:v0.12.0
+grafana/grafana:v4.6.3
+quay.io/coreos/kube-state-metrics:v1.1.0)
 
 for imageName in ${image_list[@]};
 do
@@ -24,5 +24,5 @@ EOF
 done
 
 git add .
-git commit -m "add k8s prometheus images..."
+git commit -m "fix prometheus images version..."
 git push origin master

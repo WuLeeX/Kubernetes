@@ -1,2 +1,2 @@
-  FROM quay.io/coreos/kube-state-metrics:latest
+  FROM quay.io/coreos/kube-state-metrics:v1.1.0
   MAINTAINER wulixuan <wulixuan@inspur.com>
